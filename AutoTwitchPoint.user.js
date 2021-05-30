@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Auto Claim Twitch Channel Point
 // @namespace   https://github.com/adeFuLoDgu/Auto-Claim-Twitch-Channel-Point
-// @Version     0.1
+// @Version     0.2
 // @description Automatically claims the randomly appearing bonus chest on any open twitch stream.
 // @author      adeFuLoDgu
 // @include     *://*.twitch.tv/*
@@ -14,7 +14,7 @@
 (function() {
 	'use strict';
 	setInterval(() => {
-		var bonusChests = document.getElementsByClassName('claimable-bonus__icon tw-flex');
+		var bonusChests = document.getElementsByClassName('claimable-bonus__icon');
 		if (bonusChests.length > 0) bonusChests[0].click();
 	}, 10000);
 })();
